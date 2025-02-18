@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+  position: relative;
+}
+  
+.phase {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 1s ease;
+}
+  
+.phase.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+  
+.phase.fade-out {
+  opacity: 0;
+}
+
+
+.phase-typewriter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+  
+#typewriter-text {
+  font-size: 1.5em;
+  text-align: center;
+  max-width: 80%;
+  color: white;
+}
+  
+.scroll-container {
+  display: none; 
+  opacity: 0;
+  transition: opacity 1s ease;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+  
+.scroll-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  }
+  
+#phase2 {
+  background: black;
+}
+  
+#canvas1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+  
+#phase3 {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+#text-Container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+  
+#phase4 {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+#readAgainButton {
+  padding: 1em 2em;
+  font-size: 1.2em;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+  
+.scroll-prompt {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.5em;
+  color: white;
+  opacity: 0.8;
+}
+
+.scroll-prompt2 {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 0.5em;
+  color: white;
+  opacity: 0.8;
+}
+  
+@media (max-width: 768px) {
+  #typewriter-text {
+    font-size: 1.2em;
+    max-width: 90%;
+  }
+  #readAgainButton {
+    font-size: 1em;
+    padding: 0.8em 1.5em;
+  }
+  #text-Container {
+    width: 90%;
+  }
+  .scroll-prompt .scroll-prompt2{
+    font-size: 16px;
+  }
+}
+  
